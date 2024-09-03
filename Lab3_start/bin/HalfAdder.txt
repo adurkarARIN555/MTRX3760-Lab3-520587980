@@ -1,0 +1,10 @@
+component XOR HASum
+component AND HACarry
+wire 2
+ConnectInput wire 0 HASum 0
+ConnectInput wire 1 HASum 1
+ConnectInput wire 0 HACarry 0
+ConnectInput wire 1 HACarry 1
+InputWires 2 0 1
+outputs 2 HASum HACarry
+end
