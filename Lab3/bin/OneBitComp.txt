@@ -1,22 +1,19 @@
-component NOT0
-component NOT1
-component AND0
-component AND1
-component OR0
-component NOT2
-wire 7
-ConnectInput wire 0 NOT0 0
-ConnectInput wire 1 NOT1 0
-ConnectInput wire 0 AND1 0
-ConnectInput wire 1 AND0 1
-ConnectOutput NOT0 wire 2
-ConnectInput wire 2 AND0 0
-ConnectOutput NOT1 wire 3
-ConnectInput wire 3 AND1 1
-ConnectOutput AND0 wire 4
-ConnectOutput AND1 wire 5
-ConnectInput wire 4 OR0 0
-ConnectInput wire 5 OR0 1
-ConnectOutput OR0 wire 6
-ConnectInput wire 6 NOT2 0
+# One Bit Comparator
+component xor xor0
+component not not0
+component and and0
+
+wire inWireA
+wire inWireB
+
+connect inWireA xor0 0
+connect inWireB xor0 1
+connect xor0 not0 0
+connect inWireA and0 0
+connect not0 and0 1
+
+testerOutput and0 0  # Equality output
+testerInput inWireA
+testerInput inWireB
+
 end

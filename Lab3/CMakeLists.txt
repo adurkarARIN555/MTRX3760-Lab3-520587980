@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.10) # Ensures CMake version is recent enough
 project(Lab3) # Name of this project
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS "-Wall") # Show warnings
 set( CMAKE_RUNTIME_OUTPUT_DIRECTORY # Destination for generated executable
 ${CMAKE_SOURCE_DIR}/bin

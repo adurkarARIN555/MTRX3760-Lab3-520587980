@@ -1,10 +1,18 @@
-component XOR HASum
-component AND HACarry
-wire 2
-ConnectInput wire 0 HASum 0
-ConnectInput wire 1 HASum 1
-ConnectInput wire 0 HACarry 0
-ConnectInput wire 1 HACarry 1
-InputWires 2 0 1
-outputs 2 HASum HACarry
+# Half Adder
+component xor xor0
+component and and0
+
+wire inWireA
+wire inWireB
+
+connect inWireA xor0 0
+connect inWireB xor0 1
+connect inWireA and0 0
+connect inWireB and0 1
+
+testerOutput xor0 0  # Sum output
+testerOutput and0 0  # Carry output
+testerInput inWireA
+testerInput inWireB
+
 end
